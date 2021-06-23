@@ -7,7 +7,17 @@ v-model="drawer" :clipped="clipped" fixed app>
 <v-list-item-content>
 <img src="/ssep-logo.png" alt="ssep login" style="width:50px; height:auto">
 </v-list-item-content>
+
 </v-list-item>
+<v-list-item  @click="back">
+<v-list-item-action>
+<v-icon style="border-radius:50%; padding:7px;" class="secondary white--text">mdi-arrow-left</v-icon>
+</v-list-item-action>
+<v-list-item-content>
+<v-list-item-title  v-text="'go back'"/>
+</v-list-item-content>
+</v-list-item>
+
 
 <v-list-item v-for="(item, i) in menus" :key="i" :to="item.to" router exact>
 <v-list-item-action>
@@ -43,9 +53,9 @@ v-model="drawer" :clipped="clipped" fixed app>
 
 </v-main>
 
-<v-footer :fixed="fixed" app class="primary white--text">
+<!-- <v-footer :fixed="fixed" app class="primary white--text">
 <span>&copy; {{year}}</span>
-</v-footer>
+</v-footer> -->
 </v-app>
 </template>
 
@@ -76,6 +86,10 @@ mounted () {
 methods:{
 async logout() {
   await this.$auth.logout();
+},
+
+back(){
+    if ( this.$route.path != "/"  )  this.$router.go(-1);
 },
 get_menus () {
 
@@ -126,6 +140,7 @@ var user_callagent = [
   ];
 
   var all_menu = [
+
             { icon: 'mdi-apps', title: 'Home',to: '/' },
             { icon: 'mdi-chart-bubble', title: 'Job',to: '/job' },
             { icon: 'mdi-account', title: 'Users',to: '/user' },
@@ -141,6 +156,7 @@ var user_callagent = [
             { icon: 'mdi-briefcase-check', title: 'Role',to: '/role' },
             { icon: 'mdi-arrange-bring-forward', title: 'Status',to: '/status' },
             { icon: 'mdi-chart-areaspline', title: 'Reports',to: '/reports' },
+
   ];
 
 
