@@ -67,7 +67,7 @@ module.exports = {
         }
     },
     router: {
-        middleware: ['auth', 'check-before-move']
+        middleware: ['auth']
     },
 
     /*
