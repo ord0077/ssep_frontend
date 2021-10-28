@@ -134,7 +134,6 @@ var user_callagent = [
             { icon: 'mdi-file-document', title: 'Field Activity Form',to: '/fieldactivity' },
             { icon: 'mdi-file-document', title: 'Call Center Form',to: '/callcenterform' },
             { icon: 'mdi-codepen', title: 'Department',to: '/department' },
-
             { icon: 'mdi-chart-areaspline', title: 'Reports',to: '/reports' },
   ];
 
