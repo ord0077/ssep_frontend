@@ -118,7 +118,6 @@ var user_callagent = [
             { icon: 'mdi-file-document', title: 'Call Center Form',to: '/callcenterform' },
 
             { icon: 'mdi-codepen', title: 'Department',to: '/department' },
-            { icon: 'mdi-codepen', title: 'Department',to: '/department' },
             { icon: 'mdi-image-area', title: 'District',to: '/district' },
             { icon: 'mdi-chart-areaspline', title: 'Reports',to: '/reports' },
   ];
