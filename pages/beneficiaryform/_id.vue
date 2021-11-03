@@ -3,10 +3,10 @@
      <v-toolbar flat><strong>Activity Details</strong></v-toolbar>
      <v-divider></v-divider>
      <v-simple-table>
-    
+
     <template v-slot:default>
       <tbody>
-      
+
       <tr>
           <th>#</th>
           <td>{{ item.id }}</td>
@@ -57,7 +57,7 @@
           <td>{{ item.supplier_name }}</td>
         </tr>
 
-         <tr>
+         <!-- <tr>
           <th>Attachment</th>
           <td>
 
@@ -69,31 +69,31 @@
             </template>
 
             <v-img height="auto" width="100%" :src="item.attachment"></v-img>
-            </v-dialog> 
+            </v-dialog>
 
           </td>
-        </tr>
-         
-           <tr>
+        </tr> -->
+
+           <!-- <tr>
           <th>Map latitude</th>
           <td>{{ item.map_lat }}</td>
-        </tr> 
+        </tr>
 
         <tr>
           <th>Map longitude</th>
           <td>{{ item.map_long }}</td>
-        </tr> 
+        </tr> -->
 
         <tr>
           <th>Location </th>
           <td>{{ item.map_location }}</td>
-        </tr> 
+        </tr>
 
 
          <tr>
           <th>User</th>
           <td>{{ user }}</td>
-        </tr> 
+        </tr>
 
          <tr>
           <th>Submitted</th>
@@ -120,19 +120,19 @@
         arr:[],
       }
     },
- 
-    mounted () {            
-              
+
+    mounted () {
+
         this.$axios.get(`beneficiaryform/${this.$route.params.id}`).then(res => {
             console.log(res.data);
             this.item = res.data;
-            
+
             this.user = res.data.user.name || '';
             this.fms = res.data.fms;
             // this.arr = JSON.parse(res.data.survey_field);
-            
+
         });
-            
+
     }
 
   }
