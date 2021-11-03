@@ -57,32 +57,6 @@
           <td>{{ item.supplier_name }}</td>
         </tr>
 
-         <!-- <tr>
-          <th>Attachment</th>
-          <td>
-
-            <v-dialog v-model="dialog1" max-width="900px">
-            <template v-slot:activator="{ on }">
-            <div class="pa-5">
-                  <v-img v-on="on" height="175px" width="250px" :src="item.attachment"></v-img>
-            </div>
-            </template>
-
-            <v-img height="auto" width="100%" :src="item.attachment"></v-img>
-            </v-dialog>
-
-          </td>
-        </tr> -->
-
-           <!-- <tr>
-          <th>Map latitude</th>
-          <td>{{ item.map_lat }}</td>
-        </tr>
-
-        <tr>
-          <th>Map longitude</th>
-          <td>{{ item.map_long }}</td>
-        </tr> -->
 
         <tr>
           <th>Location </th>
